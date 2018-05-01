@@ -1,3 +1,6 @@
+a{
+    text-decoration: none !important;
+}
 .top-nav-prop li a{
     padding: 10px;
     color: #6e6e6e;
@@ -8,6 +11,12 @@
     border-bottom: 2px solid #dc3545;
 }
 .top-nav-prop li a:hover i{
+    color: #dc3545;
+}
+.top-nav-prop li.active a{
+    border-bottom: 2px solid #dc3545;
+}
+.top-nav-prop li.active a i{
     color: #dc3545;
 }
 .h2-style-blue{
@@ -30,5 +39,100 @@
     right: 0;
     bottom: 0;
     height: 98%;
-    background: #002395;
+    background: rgba(0,35,149,0.68);
+    width: 35px;
+}
+.card-tool a i{
+    color: #fff;
+    transition: all 0.3s;
+}
+.card-tool li{
+    width: 35px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.card-tool li a:hover i{
+    color: #ffdee1;
+}
+.card-tool li:first-child{
+    top: 25%;
+    position: absolute;
+}
+.card-tool li:nth-child(2){
+    top: 50%;
+    position: absolute;
+}
+.card-tool li:last-child{
+    top: 75%;
+    position: absolute;
+
+}
+.property-status.other{
+    background: rgba(234, 114, 61, 0.2);
+    display: inline-block;
+    border-radius: 500rem;
+}
+.property-status.other.push-done{
+    background: rgba(33, 182, 90, 0.2);
+
+}
+.property-status.other h5{
+    color: #ed2939;
+    padding: 0.4rem 0.5rem;
+}
+.property-status.other.push-done h5{
+    color: #21b65a;
+}
+.card-date i{
+    padding-left: 3px;
+}
+.card-date{
+    padding: 0.3rem 0;
+    text-align: left;
+}
+.page-item:last-child .page-link{
+    justify-items: center;
+    display: flex;
+    padding: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    justify-items: center;
+    display: flex;
+    padding: 10px;
+}
+.page-link{
+    color: #002395;
+}
+.page-link:hover{
+    color: #fff;
+    background: #dc3545;
+}
+.delete-card{
+    position: absolute;
+    height:30px ;
+    width: 30px;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    line-height: 35px;
+
+}
+.delete-card:hover{
+    background: rgba(220, 53, 69, 0.62);
+}
+.delete-card a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
 }

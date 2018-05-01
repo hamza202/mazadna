@@ -122,10 +122,18 @@ var x = setInterval(function() {
     $('.slick-next').addClass('fas');
     $('.slick-prev').html('<i class="fas fa-angle-left"></i>');
   
-
-
-
-
+    $('.for-copmany').css('display','none');
+    $('#thetype').change(function() {
+      if ($(this).val() === '1') {
+        $('.for-copmany').css('display','none');
+      }
+      if ($(this).val() === '2') {
+        $('.for-copmany').css('display','flex');
+      }
+      if ($(this).val() === '3') {
+        $('.for-copmany').css('display','flex');
+      }
+  });
 });
 // document ready
 

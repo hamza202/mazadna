@@ -3,6 +3,7 @@
 
 
 <head>
+    <title>تاجير</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,7 +84,7 @@
                                                   <a class="nav-link" href="contactus.html">تواصل معنا</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                  <a class="nav-link" href="">تسجيل</a>
+                                                  <a class="nav-link" href="register.html">تسجيل</a>
                                                 </li>
                                                 <li class="nav-item">
                                                   <a href="tel:00966-545676382" class="nav-link">00966-545676382</a>
@@ -118,7 +119,7 @@
 
 <section class="property-add">
     <div class="container">
-        <h1 class="text-center title-page">اضافة عقار جديد</h1>
+        <h1 class="text-center title-page">تأجير</h1>
 
         <div class="form-add">
 
@@ -136,6 +137,19 @@
                                                 <label for="thetitle">اسم العقار :</label>
                                                 <input type="text" class="form-control" id="thetitle"> </div>
                                         </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                    <label for="thetype">صفة المؤجر :</label>
+                                                    <select class="custom-select form-control" id="thetype" name="thetype">
+                                                            <option value="">اختر</option>
+                                                            <option value="مالك">مالك</option>
+                                                            <option value="وسيط">وسيط</option>
+                                                            <option value="وكيل">وكيل</option>
+                                                        </select>
+                                                
+                                                </div>
+                                            </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="thetype">نوع العقار :</label>
@@ -151,7 +165,18 @@
                                             
                                             </div>
                                         </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="commercialRegister">رقم السجل التجاري :</label>
+                                                    <input type="text" class="form-control" id="commercialRegister"> </div>
+                                            </div>
                                     </div>
+                                    <div class="row">
+                                            
+                                            <div class="col-md-6">
+                                                
+                                            </div>
+                                        </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -160,8 +185,13 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="size">المساحة(م٢)  :</label>
-                                                <input type="tel" class="form-control" id="size"> </div>
+                                                <label for="case">الحالة :</label>
+                                                <select class="custom-select form-control" id="case" name="case">
+                                                        <option value="">اختر</option>
+                                                        <option value="للايجار">للايجار</option>
+                                                        <option value="للبيع">للبيع</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -173,6 +203,19 @@
                                                 </div>
                                     </div>
                                     <div class="row">
+                                            <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="behName1">عمر العقار :</label>
+                                                        <input type="text" class="form-control" id="behName1">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="price">مبلغ الايجار</label>
+                                                        <input type="text" class="form-control" id="price">
+                                                    </div>
+                                                </div>  
+                                        
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="describe">وصف العقار :</label>
@@ -185,20 +228,32 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label for="office-number">عدد الواجهات :</label>
-                                                <input type="text" class="form-control" id="office-number"> </div>
-                                        </div>
+                                                <label for="sizee">المساحة م2 :</label>
+                                                <input type="text" class="form-control" id="sizee"> 
+                                            </div>
+                                         </div>
                                         <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="propertiy-case">حالة العقار :</label>
                                                     <select class="custom-select form-control" id="propertiy-case" name="propertiy-case">
+                                                            <option value="">اختر</option>
                                                             <option value="مؤجر">مؤجر</option>
                                                             <option value="خالي">خالي</option>
-                                                            <option value="لا شيء">لا شيء</option>
+                                                            
                                                     </select>
                                             </div>
-                                    </div>
-                                   
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="sizee">شهري / سنوي :</label>
+                                                <select class="custom-select form-control" id="propertiy-case" name="propertiy-case">
+                                                        <option value="لا شيء">لا شيء</option>
+                                                        <option value="مؤجر">سنوي</option>
+                                                        <option value="خالي">شهري</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                </div>
                                 </section>
                                 <!-- Step 2 -->
                                 <h6>عنوان العقار</h6>
@@ -247,7 +302,8 @@
                                         <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="district">الحي :</label>
-                                                    <input type="text" class="form-control" id="district"> </div>
+                                                    <input type="text" class="form-control" id="district"> 
+                                                </div>
                                             </div>
                                             <div class="col-md-4">
                                                     <div class="form-group">
@@ -375,18 +431,7 @@
                                                         <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
                                                     </div>
                                                 </div>  
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="behName1">عمر العقار :</label>
-                                                <input type="text" class="form-control" id="behName1">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="participants1">عدد الشوارع</label>
-                                                <input type="text" class="form-control" id="participants1">
-                                            </div>
-                                        </div>  
+                                       
                                          
                                         
                                         <div class="col-md-12">
@@ -420,22 +465,22 @@
 <footer class="footer-custom">
         <div class="container">
           <div class="row">
-              <div class="col-md-3">
-                  <ul class="list-one">
-                    <li><a href="#">اراء العملاء</a></li>
-                    <li><a href="#">الشروط والأحكام</a></li>
-                    <li><a href="#">العقارات في صور</a></li>
-                    <li><a href="#">نبذة عنا</a></li>
-                  </ul>
-                </div>
                 <div class="col-md-3">
-                    <ul class="list-two">
-                      <li><a href="#">الاسئلة المتكررة</a></li>
-                      <li><a href="#">سياسة الخصوصية</a></li>
-                      <li><a href="#">العقارات في صور</a></li>
-                      <li><a href="#">وكلائنا</a></li>
-                    </ul>
-                  </div>
+                        <ul class="list-one">
+                          <li><a href="customer.html">اراء العملاء</a></li>
+                          <li><a href="conditions.html">الشروط والأحكام</a></li>
+                          <li><a href="#">العقارات في صور</a></li>
+                          <li><a href="about-us.html">نبذة عنا</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-3">
+                          <ul class="list-two">
+                            <li><a href="questions.html">الاسئلة المتكررة</a></li>
+                            <li><a href="policy.html">سياسة الخصوصية</a></li>
+                            <li><a href="#">العقارات في صور</a></li>
+                            <li><a href="#">وكلائنا</a></li>
+                          </ul>
+                        </div>
                   <div class="col-md-3">
                       <ul class="list-three">
                         <li><a href="#"><i class="fas fa-map-marker"></i> المدينة المنورة</a></li>
