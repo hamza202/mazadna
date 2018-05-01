@@ -681,8 +681,90 @@ position: relative;
     color: #fff;
     text-decoration: none;
 }
-.margin-top-20px{margin-top:20px;}
+/* profile page edit */
+section.user{
+    padding:50px 0;
+}
+section.user .title-section{
+    font-size: 25px;
+    margin: 15px 0 30px 0;
+    color: #002395;
+}
+.box-user-edit{
 
+}
+.box-user-edit ul li{
+    padding:5px 0;
+    margin: 5px 0;
+}
+.box-user-edit ul li span.title{}
+.box-user-edit ul li span.value{
+    color: #dc3545;
+    margin-right: 10px;
+}
+.margin-top-20px{margin-top:20px;}
+section.messageview{
+    padding: 50px 0;
+}
+.messageview{
+
+}
+.messageview-left li{
+    padding: 15px 0;
+    background: rgba(249, 249, 249, 0.40);
+    border-bottom: 1px solid rgba(40, 167, 69, 0.09);
+    margin: 5px 0;
+}
+.messageview-left li .title-message{
+    color: #002395;
+}
+.messageview-left li .data-message{
+    color: #8a8a8a;
+}
+.messageview-left li .user-name{
+    color: #797979;
+}
+.messageview-left li .user-name i{
+    margin-left: 5px ;    
+}
+
+
+/* message dt */
+.box-user .title-message-dt.you{
+    background: #002395;
+    padding: 15px;
+    color: #fff;
+}
+.box-user .title-message-dt.me{
+    background: #28a745;
+    padding: 15px;
+    color: #fff;
+}
+.box-user .title-message-dt span.user-name{
+    float: left;
+    color: #f5f5f5;
+}
+.box-user .message-body{
+    padding: 15px;
+    line-height: 1.5;
+    color: #606060;
+    font-size: 14px;
+}
+
+/* top login */
+
+.user-top{
+    margin-top: 3px !important;
+}
+.user-top img{
+    display: block;
+    float: right;
+}
+.user-top span{
+    display: block;
+    float: left;
+    padding-top: 1px;
+}
 /**الشاشة الكبيرة**/
 @media (min-width: 1200px)
  {
