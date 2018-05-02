@@ -106,16 +106,19 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Output the result in an element with id="demo"
-    document.getElementsByClassName("demo").innerHTML = days + "ايام " + hours + "ساعات "
-    + minutes + "دقائق " + seconds + "ثوان ";
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours ;
+    document.getElementById("minutes").innerHTML = minutes ;
+    document.getElementById("seconds").innerHTML = seconds ;
 
-    $('.demo1').html(days + "ايام " + hours + "ساعات "+ minutes + "دقائق " + seconds + "ثوان ");
+
+
+
     // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementsByClassName("demo").innerHTML = "EXPIRED";
-    }
+    // if (distance < 0) {
+    //     clearInterval(x);
+    //     document.getElementById("demo").innerHTML = "EXPIRED";
+    // }
 }, 1000);
    
     $('.slick-next').html('<i class="fas fa-angle-right"></i>');
@@ -136,3 +139,56 @@ var x = setInterval(function() {
   });
 });
 // document ready
+$(document).ready(function(){
+  var element =  document.getElementById('map');
+    if (typeof(element) != 'undefined' && element != null)
+  {
+    map = new GMaps({
+    div: '#map',
+    zoom:5
+  });
+  }
+});
+
+
+
+
+
+// for auction number
+
+jQuery(document).ready(function(){
+  $('.qtyplus').click(function(e){
+      e.preventDefault();
+      // Get the field name
+      fieldName = $(this).attr('field');
+      // Get its current value
+      var currentVal = parseInt($('input[name='+fieldName+']').val());
+      var numberValue =parseInt($('#numberEmportant').text());
+      // If is not undefined
+      if (!isNaN(currentVal)) {
+          // Increment
+          $('input[name='+fieldName+']').val(currentVal + numberValue);
+      } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+      }
+  });
+  // This button will decrement the value till 0
+  $(".qtyminus").click(function(e) {
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+      fieldName = $(this).attr('field');
+      // Get its current value
+      var currentVal = parseInt($('input[name='+fieldName+']').val());
+      var numberValue =parseInt($('#numberEmportant').text());
+      // If it isn't undefined or its greater than 0
+      if (!isNaN(currentVal) && currentVal > 0) {
+          // Decrement one
+          $('input[name='+fieldName+']').val(currentVal - numberValue);
+      } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+      }
+  });
+});

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+        <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Over Layer Map</h4>
+                    <div id="overlayermap" class="gmaps"></div>
+                </div>
+            </div>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 121.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUBL-6KdclGJ2a_UpmB2LXvq7VOcPT7K4&sensor=true&callback=initMap">
+    </script>
+    <script>
+    $(document).ready(function(){
+
+var map = new google.maps.Map(document.getElementById('map'), {
+el: "#styledmap",
+lat: 41.895465,
+lng: 12.482324,
+zoom: 5, 
+zoomControl : true,
+zoomControlOpt: {
+  style : "SMALL",
+  position: "TOP_LEFT"
+},
+panControl : true,
+streetViewControl : false,
+mapTypeControl: false,
+overviewMapControl: false
+});
+
+var styles = [
+  {
+    stylers: [
+      { hue: "#6164c1" },
+      { saturation: 20 }
+    ]
+  }, {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+          { lightness: 200 },
+          { visibility: "simplified" }
+    ]
+  }, {
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+          { visibility: "off" }
+    ]
+  }
+];
+
+map.addStyle({
+  styledMapName:"Styled Map",
+  styles: styles,
+  mapTypeId: "map_style"  
+});
+
+map.setStyle("map_style");
+});
+</script>
+  </body>
+</html>
+      
