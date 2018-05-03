@@ -534,7 +534,7 @@ google map Page
   border-radius: 4px;
   padding: 10px 20px; }
 
-.gmaps-overlay_arrow {
+.gmaps-overlay_arrow:nth-last-child(last) {
   left: 50%;
   margin-left: -16px;
   width: 0;
@@ -865,25 +865,23 @@ input.qtyminus {
     line-height: 0;
     text-align: center;
 }
+/* sdad page */
+
+section.sdad{
+    padding: 50px 0;
+}
+.box-user.alert-danger
+{
+    background-color: #dc3545;
+    color: #fff;
+    line-height: 1.5;
+}
+.list-contactus li span.bank-name{
+    letter-spacing: 0;
+    color: #28a745;
+}
+
 /* property page */
-.filter-custom{
-
-}
-.content-search{
-
-}
-.content-search .content1{
-    
-}
-.content-search .content2{
-    
-}
-.content-search .content3{
-    
-}
-.content-search .content4{
-    
-}
 
 /**الشاشة الكبيرة**/
 @media (min-width: 1200px)
